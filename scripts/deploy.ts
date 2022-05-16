@@ -7,7 +7,7 @@ import { ethers } from "hardhat";
 import { Contract } from "ethers";
 
 async function main() {
-  // Hardhat always runs the compile task when running scripts with its command
+  // Hardhat always runs to compile task when running scripts with its command
   // line interface.
   //
   // If this script is run directly using `node` you may want to call compile
@@ -27,6 +27,13 @@ async function main() {
   await testContract.deployed();
 
   console.log("testContract deployed to:", testContract.address);
+
+  const alice = await ethers.getSigner('0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266');
+  const Increment = await ethers.getContractFactory('Increment', alice);
+  const increment: Contract = await Increment.deploy();
+  await increment.deployed();
+
+  console.log(`contract increment address: ${await increment.address}`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

@@ -44,9 +44,9 @@ describe("MyToken", () => {
   });
 
 
-  it("send token address 1 correctly",  async function() {
+  it("send token address 1 correctly", async function() {
     await token.transfer(addr1.getAddress(), 100);
-    let  balanceOfAddress1 = await token.balanceOf(addr1.getAddress());
+    let balanceOfAddress1 = await token.balanceOf(addr1.getAddress());
     expect(balanceOfAddress1).to.equal(99);
 
     await token.connect(addr1).transfer(addr2.getAddress(), 50);
@@ -60,5 +60,36 @@ describe("MyToken", () => {
   //   const balanceOfAddress2 = await token.balanceOf(addr2.getAddress());
   //   expect(balanceOfAddress2).to.equal(40);
   // });
+});
 
+describe("Increment", () => {
+  let increment: Contract;
+
+  beforeEach(async () => {
+    const owner = await ethers.getSigner("0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266");
+    const Increment = await ethers.getContractFactory("Increment", owner);
+    increment = await Increment.deploy();
+    await increment.deployed();
+  });
+
+  it("should pass if successfully setNum", async function() {
+    expect(await increment.number()).to.equal(0);
+
+    const tx = await increment.setNum(2);
+    await tx.wait();
+
+    expect(await increment.number()).to.equal(2);
+  });
+
+  it("should pass if successfully getNum", async function() {
+    const tx = await increment.setNum(4);
+    await tx.wait();
+    expect(await increment.getNum()).to.equal(4);
+  });
+
+  it("should emit IncrementNumber event if call increment func", async function() {
+    await increment.setNum(22);
+    await expect(increment.increment(2)).to.emit(increment, "IncrementNumber")
+      .withArgs(2, 24);
+  });
 });
