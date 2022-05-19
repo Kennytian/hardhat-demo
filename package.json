@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "hardhat clean",
+    "rpc-server": "hardhat node",
     "ganache-server": "hardhat run ./scripts/deploy.ts --network ganache",
+    "clean": "hardhat clean",
     "compile": "hardhat compile",
-    "start-rpc-server": "hardhat node",
     "remove-logs": "npx hardhat remove-logs",
     "test": "hardhat test"
   },
@@ -47,7 +47,6 @@
     "solidity-coverage": "^0.7.21",
     "ts-node": "^10.7.0",
     "typechain": "^8.0.0",
-    "typescript": "^4.6.4",
-    "web3": "^1.7.3"
+    "typescript": "^4.6.4"
   }
 }
