@@ -1,0 +1,20 @@
+//SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.13;
+
+contract IfElse {
+    function example(uint _x) external pure returns (uint) {
+        if (_x < 10) {
+            return 1;
+        } else if (_x < 20) {
+            return 2;
+        } else if (_x < 30) {
+            return 3;
+        }
+        return 0;
+    }
+
+    function ternary(uint x) external pure returns (uint) {
+        return x > 10 ? 1 : 0;
+    }
+}
