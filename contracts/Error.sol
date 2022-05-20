@@ -19,7 +19,7 @@ contract Error {
     uint public number = 234;
 
     function testAssert(uint i) public view {
-        assert(number == 234);
+        assert(number == i);
     }
 
     function foo(uint i) public {

@@ -28,6 +28,7 @@ contract FunctionModifier {
 
     modifier cap(uint x) {
         require(x < 100, 'x >= 100');
+        _;
     }
 
     function incBy(uint x) external whenNotPause cap(x) {

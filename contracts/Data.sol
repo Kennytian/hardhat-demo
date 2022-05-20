@@ -20,6 +20,7 @@ contract ValueType {
     int public minInt = type(int).min;
     int public maxInt = type(int).max;
 
-    address public addr = 0x2424324fafdafdaf2424324fafdaf;
-    byte32 public b32 = 0x2342342424324fafdaf2424324fafdaf24243fdaf2424324fafdaf2424324fafdaf;
+    address public addr = 0x7Fdd8eF338A3BD437EbCCCb33f44728Fc4252735;
+//    byte32 public b32 = 0xe19ff1a867d158e92e82203f518fa055d7fe4f65fe47a7253908c996a9ec6235;
+    bytes32 constant statictext1 = "Hello";
 }
