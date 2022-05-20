@@ -28,7 +28,11 @@ contract Error {
         require(i < 10, 'error: i >= 10');
     }
 
-    function testCustomError() public pure {
-
+    error MyError(address caller, uint i);
+    function testCustomError(uint i) public view {
+        // require(i <= 10, "very long long long long long error message");
+        if(i> 10){
+            revert MyError(msg.sender, i);
+        }
     }
 }
