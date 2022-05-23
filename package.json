@@ -8,6 +8,7 @@
     "rpc-server": "hardhat node",
     "ganache-server": "hardhat run ./scripts/deploy.ts --network ganache",
     "clean": "hardhat clean",
+    "solhint": "solhint contracts/**/*.sol",
     "compile": "hardhat compile",
     "remove-logs": "npx hardhat remove-logs",
     "test": "hardhat test"
@@ -58,6 +59,9 @@
   "lint-staged": {
     "{scripts,test}/**/*.{js,jsx,ts,tsx,json}": [
       "prettier --write"
+    ],
+    "contracts/**/*.sol": [
+      "pnpm run solhint"
     ]
   }
 }
