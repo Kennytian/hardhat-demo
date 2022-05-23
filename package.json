@@ -58,9 +58,6 @@
   "lint-staged": {
     "{scripts,test}/**/*.{js,jsx,ts,tsx,json}": [
       "prettier --write"
-    ],
-    "contracts/**/*.{sol}": [
-      "pnpm run lint"
     ]
   }
 }
