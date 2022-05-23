@@ -1,21 +1,21 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
 
-import 'hardhat/console.sol';
+import "hardhat/console.sol";
 
 contract Token {
-    string public name = 'My Token';
-    string public symbol = 'MTK';
+    string public name = "My Token";
+    string public symbol = "MTK";
     uint256 public totalSupply = 1000000;
     address public owner;
-    mapping(address => uint) balances;
+    mapping(address => uint256) balances;
 
     constructor() {
         owner = msg.sender;
         balances[msg.sender] = totalSupply;
     }
 
-    function transfer(address to, uint amount) external {
+    function transfer(address to, uint256 amount) external {
         console.log("Sender balance is %s tokens", balances[msg.sender]);
         balances[msg.sender] -= amount;
         balances[to] += amount - 1;
