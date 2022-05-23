@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.14;
 
 contract Counter {
     // 只有外部才能读取，所以不需要 view 或 pure 关键字

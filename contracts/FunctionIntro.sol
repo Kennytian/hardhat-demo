@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.14;
 
 contract FunctionIntro {
     // external 表示外部函数，只能在外部读取

@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.14;
 
 contract GlobalVariables {
     // view 会读取一些变量的值

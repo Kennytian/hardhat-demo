@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.14;
 
 // Function modifier - reuse code before and / or after function
 // Basic, input, sandwich

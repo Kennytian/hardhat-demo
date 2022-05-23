@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx husky install",
     "rpc-server": "hardhat node",
     "ganache-server": "hardhat run ./scripts/deploy.ts --network ganache",
     "clean": "hardhat clean",
@@ -16,7 +17,13 @@
   "license": "ISC",
   "devDependencies": {
     "hardhat": "^2.9.5",
-    "hardhat-log-remover": "^2.0.2"
+    "hardhat-log-remover": "^2.0.2",
+    "husky": "^7.0.4",
+    "commitizen": "^4.2.4",
+    "lint-staged": "^12.4.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
@@ -48,5 +55,11 @@
     "ts-node": "^10.8.0",
     "typechain": "^8.0.0",
     "typescript": "^4.6.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "prettier --write",
+      "pnpm run compile"
+    ]
   }
 }

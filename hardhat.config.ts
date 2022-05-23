@@ -31,7 +31,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 const config: HardhatUserConfig = {
   defaultNetwork: "ropsten",
   solidity: {
-    version: "0.8.13",
+    version: "0.8.14",
     settings: {
       optimizer: {
         enabled: true,

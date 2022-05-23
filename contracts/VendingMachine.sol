@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.14;
 
 // 定义在 contract 之外，继承的合约也能调用这个 error
 error Unauthorized(address caller);
