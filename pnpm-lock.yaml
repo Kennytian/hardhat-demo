@@ -32,7 +32,7 @@ specifiers:
   husky: ^7.0.4
   lint-staged: ^12.4.1
   prettier: ^2.6.2
-  prettier-plugin-solidity: ^1.0.0-beta.19
+  prettier-plugin-solidity: ^1.0.0-dev.21
   solhint: ^3.3.7
   solidity-coverage: ^0.7.21
   ts-node: ^10.8.0
@@ -63,7 +63,7 @@ dependencies:
   ethers: 5.6.7
   hardhat-gas-reporter: 1.0.8_hardhat@2.9.6
   prettier: 2.6.2
-  prettier-plugin-solidity: 1.0.0-beta.19_prettier@2.6.2
+  prettier-plugin-solidity: 1.0.0-dev.21_prettier@2.6.2
   solhint: 3.3.7
   solidity-coverage: 0.7.21
   ts-node: mirrors.tencent.com/ts-node/10.8.0_ihi2kx3po6rqbrzdqgpcfvwinm
@@ -4373,8 +4373,8 @@ packages:
       fast-diff: 1.2.0
     dev: false
 
-  /prettier-plugin-solidity/1.0.0-beta.19_prettier@2.6.2:
-    resolution: {integrity: sha512-xxRQ5ZiiZyUoMFLE9h7HnUDXI/daf1tnmL1msEdcKmyh7ZGQ4YklkYLC71bfBpYU2WruTb5/SFLUaEb3RApg5g==}
+  /prettier-plugin-solidity/1.0.0-dev.21_prettier@2.6.2:
+    resolution: {integrity: sha512-3Q8AiHLbKXJ0AnYqw+lrVpLW82syMn/jgk1OniIFelpWFHAST05xIhMs/sYf46VZEJaR56UjSsNlQm9JmZkREg==}
     engines: {node: '>=12'}
     peerDependencies:
       prettier: ^2.3.0
@@ -4387,14 +4387,6 @@ packages:
       solidity-comments-extractor: 0.0.7
       string-width: mirrors.tencent.com/string-width/4.2.3
     dev: false
-
-  /prettier/1.19.1:
-    resolution: {integrity: sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==}
-    engines: {node: '>=4'}
-    hasBin: true
-    requiresBuild: true
-    dev: false
-    optional: true
 
   /prettier/2.6.2:
     resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
@@ -4879,7 +4871,7 @@ packages:
       lodash: mirrors.tencent.com/lodash/4.17.21
       semver: mirrors.tencent.com/semver/6.3.0
     optionalDependencies:
-      prettier: 1.19.1
+      prettier: mirrors.tencent.com/prettier/1.19.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -5183,7 +5175,7 @@ packages:
       js-sha3: 0.8.0
       lodash: mirrors.tencent.com/lodash/4.17.21
       mkdirp: mirrors.tencent.com/mkdirp/1.0.4
-      prettier: 2.6.2
+      prettier: mirrors.tencent.com/prettier/2.6.2
       ts-command-line-args: 2.3.1
       ts-essentials: 7.0.3_typescript@4.6.4
       typescript: mirrors.tencent.com/typescript/4.6.4
@@ -6140,7 +6132,7 @@ packages:
     name: ethereumjs-abi
     version: 0.6.8
     dependencies:
-      bn.js: 4.12.0
+      bn.js: mirrors.tencent.com/bn.js/4.12.0
       ethereumjs-util: 6.2.1
     dev: false
 
@@ -11072,6 +11064,24 @@ packages:
     name: prelude-ls
     version: 1.2.1
     engines: {node: '>= 0.8.0'}
+    dev: false
+
+  mirrors.tencent.com/prettier/1.19.1:
+    resolution: {integrity: sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/prettier/-/prettier-1.19.1.tgz}
+    name: prettier
+    version: 1.19.1
+    engines: {node: '>=4'}
+    hasBin: true
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  mirrors.tencent.com/prettier/2.6.2:
+    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==, registry: https://mirrors.cloud.tencent.com/npm/, tarball: https://mirrors.tencent.com/npm/prettier/-/prettier-2.6.2.tgz}
+    name: prettier
+    version: 2.6.2
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: false
 
   mirrors.tencent.com/private/0.1.8:
