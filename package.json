@@ -61,9 +61,8 @@
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "prettier --write"
     ],
-    "src/**/*.{sol}": [
-      "pnpm run lint",
-      "pnpm run compile"
+    "contracts/**/*.{sol}": [
+      "pnpm run lint"
     ]
   }
 }

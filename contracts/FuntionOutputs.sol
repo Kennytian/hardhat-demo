@@ -19,6 +19,6 @@ contract FunctionOutputs {
     function destructingAssigment() public pure {
         (uint256 x, bool b) = returnMany();
         // only use variable b
-        (, bool b) = returnMany();
+        (, bool b1) = returnMany();
     }
 }
