@@ -23,7 +23,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "hardhat": "^2.9.5",
     "hardhat-log-remover": "^2.0.2",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "lint-staged": "^12.4.1"
   },
   "dependencies": {
@@ -35,8 +35,8 @@
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
     "@types/node": "^17.0.32",
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
     "chai": "^4.3.6",
     "dotenv": "^16.0.1",
     "eslint": "^8.16.0",
