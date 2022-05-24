@@ -20,7 +20,7 @@ contract Enum {
     Status public status;
     Order[] public orders;
 
-    function get() view returns (Status) {
+    function get() public view returns (Status) {
         return status;
     }
 
@@ -36,7 +36,3 @@ contract Enum {
         delete status;
     }
 }
-
-
-
-
