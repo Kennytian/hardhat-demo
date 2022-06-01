@@ -8,7 +8,7 @@ library Math {
 }
 
 contract Test {
-    function testMax(uint x, uint y) external pure returns (uint) {
+    function testMax(uint x, uint y) external returns (uint) {
         return Math.max(x, y);
     }
 }
