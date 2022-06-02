@@ -17,14 +17,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "^17.0.1",
-    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "hardhat": "^2.9.7",
     "hardhat-log-remover": "^2.0.2",
     "husky": "^8.0.1",
-    "lint-staged": "^12.5.0"
+    "lint-staged": "^13.0.0"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
