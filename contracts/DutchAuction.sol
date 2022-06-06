@@ -60,5 +60,6 @@ contract DutchAuction {
             payable(msg.sender).transfer(refund);
         }
         // selfdestruct(seller);
+        selfdestruct(payable(seller));
     }
 }
